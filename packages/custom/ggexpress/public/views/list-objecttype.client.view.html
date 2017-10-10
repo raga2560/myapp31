@@ -1,0 +1,16 @@
+<section data-ng-controller="ObjecttypeController" data-ng-init="find()">
+	<div class="page-header">
+		<h1>List of object type</h1>
+	</div>
+	<div class="list-group" data-ng-repeat="article in articles">
+		<a  data-ng-href="#!/objecttype/{{article._id}}" class="list-group-item">
+			
+			<h4 class="list-group-item-heading" data-ng-bind="article.name"></h4>
+			<p class="list-group-item-text" data-ng-bind="article.desc"></p>
+			
+		</a>
+		<a href="/dispose/objecttype/{{article._id}}/edit"> edit</a>
+		<a href="/dispose/objecttype/{{article._id}}/delete"> delete</a>
+	</div>
+	
+</section>
